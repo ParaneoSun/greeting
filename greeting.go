@@ -1,6 +1,7 @@
 package greeting
 
 import "time"
+import "strconv"
 
 func Do() string {
 	//現在時刻を取得
@@ -9,11 +10,11 @@ func Do() string {
 
 	switch {
 	case current_time.Hour() >= 4 && current_time.Hour() < 10:
-		greet_str = "おはよう" + string(current_time.Hour())
+		greet_str = "おはよう" + strconv.Itoa(current_time.Hour())
 	case current_time.Hour() >= 10 && current_time.Hour() < 17:
-		greet_str = "こんにちは" + string(current_time.Hour())
+		greet_str = "こんにちは" + strconv.Itoa(current_time.Hour())
 	case current_time.Hour() >= 17:
-		greet_str = "こんばんは" + string(current_time.Hour())
+		greet_str = "こんばんは" + strconv.Itoa(current_time.Hour())
 	}
 	return greet_str
 }
