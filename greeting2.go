@@ -1,4 +1,4 @@
-package greeting2
+package greeting
 
 import "time"
 
